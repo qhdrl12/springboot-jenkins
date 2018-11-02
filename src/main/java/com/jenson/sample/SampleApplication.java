@@ -12,7 +12,7 @@ public class SampleApplication {
     private static final Logger log = LoggerFactory.getLogger(SampleApplication.class);
 
     public static void main(String[] args) {
-        log.info("application started");
+        log.info("application started!!");
 //        SpringApplication.run(SampleApplication.class, args);
         SpringApplication sa = new SpringApplication(SampleApplication.class);
         sa.addListeners(new ApplicationPidFileWriter());
