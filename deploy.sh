@@ -6,7 +6,7 @@ PID_NAME=application.pid
 
 function stop() {
     echo " "
-    echo "Stopping process on read pid"
+    echo "Stopping process on read pid."
 
     if [ -f $PID_NAME ]; then
         PID=`cat $PID_NAME`
