@@ -1,7 +1,6 @@
 #!/bin/bsh
 
 PROJECT_NAME=$1
-
 LIB_PATH=/build/libs
 JAR_FILE=$PROJECT_NAME-0.0.1-SNAPSHOT.jar
 PID_NAME=application.pid
