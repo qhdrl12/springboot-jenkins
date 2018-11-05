@@ -8,19 +8,29 @@ function stop() {
     echo " "
     echo "Stopping process on read pid."
 
-    if [ -f $PID_NAME ]; then
-        PID=`cat $PID_NAME`
+    PID=`pgrep -f $JAR_FILE`
 
-        if [[ -n $PID ]]; then
-            echo $PID
-            `kill $PID`
-            rm $PID_NAME
-        else
-            echo "PID IS EMPTY"
-        fi
+    if [[ -n $PID ]]; then
+        echo $PID
+        `kill $PID`
+#        rm $PID_NAME
     else
-        echo "$PID_NAME not found"
+        echo "PROCESS NOT RUNNING"
     fi
+
+#    if [ -f $PID_NAME ]; then
+#        PID=`cat $PID_NAME`
+#
+#        if [[ -n $PID ]]; then
+#            echo $PID
+#            `kill $PID`
+#            rm $PID_NAME
+#        else
+#            echo "PID IS EMPTY"
+#        fi
+#    else
+#        echo "$PID_NAME not found"
+#    fi
 
     echo " "
 }
