@@ -28,7 +28,7 @@ function stop() {
 function start() {
     echo " "
     echo "java -jar $LIB_PATH/$PROJECT_NAME"
-    `chmod 755 ./gradlew`
+    `./gradlew clean build`
     `java -jar $LIB_PATH/$JAR_FILE &`
     echo " "
 }
