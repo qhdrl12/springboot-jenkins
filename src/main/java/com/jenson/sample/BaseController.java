@@ -8,6 +8,6 @@ public class BaseController {
 
     @GetMapping
     public String index() {
-        return "Welcome Jenkins Sample Project";
+        return "Welcome Jenkins Sample Project!";
     }
 }
