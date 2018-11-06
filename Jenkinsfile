@@ -2,6 +2,7 @@ node {
     checkout scm
 
     stage('Build') {
+        sh  'chmod 755 gradlew'
         sh './gradlew clean build'
         archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
     }
