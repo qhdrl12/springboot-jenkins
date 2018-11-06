@@ -17,4 +17,8 @@ node {
         JENKINS_NODE_COOKIE=DONTKILLME nohup java -jar build/libs/${jar_name} &
         """
     }
+
+    stage('Finish') {
+        echo "finish"
+    }
 }
