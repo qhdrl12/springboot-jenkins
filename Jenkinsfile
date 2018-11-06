@@ -8,7 +8,7 @@ node {
     }
 
     stage('Deploy') {
-        def jar_name = "sample-SNAPSHOT-0.0.1.jar"
+        def jar_name = "sample-0.0.1-SNAPSHOT.jar"
         sh """
         if [ \$(pgrep -f ${jar_name} | wc -l) -gt 0 ]; then
             pkill -9 -f ${jar_name}
